@@ -3,23 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-<fragment
-
-    android:tag="메모장"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    class ="com.leejinsil.fragmentpratice_20220509.Fragments.MyFirstFragment"
-   />
-
-    <fragment
-
-        android:tag="메모장2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        class ="com.leejinsil.fragmentpratice_20220509.Fragments.MySecondFragment"
-        />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <fragment
+
+                android:tag="메모장"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                class ="com.leejinsil.fragmentpratice_20220509.Fragments.MyFirstFragment"
+                />
+
+            <fragment
+
+                android:tag="메모장2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                class ="com.leejinsil.fragmentpratice_20220509.Fragments.MySecondFragment"
+                />
+            <fragment
+
+                android:tag="메모장3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                class ="com.leejinsil.fragmentpratice_20220509.Fragments.MyThirdFragment"
+                />
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
